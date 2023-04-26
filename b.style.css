@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+.bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content div {
+    display: none;
+}
+
+#aboutMe {
+    display: block;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    animation-name: show;
+    /* PLAVNOST */
+    animation-duration: 5s;
+    /* /PLAVNOST */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container a {
+    /* color: #fff; */
+    text-decoration: none;
+}
+
+.container .header-main {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 7rem;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(#000, #000 2px, transparent 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    position: relative;
+    background: #fff;
+    min-height: 545px;
+    min-width: 500px;
+    border-radius: 3%;
+    box-shadow: 4px 4px 4px 4px #cdcdcd;
+    font-family: 'Socular One', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.content h3 {
+    text-align: center;
+}
+
+.content p, a{
+    left: 5px;
+    padding: 5px;
+}
+
+#contacts p {
+    font-size: 1rem;
+}
+
+.container svg {
+    width: 64px;
+    height: 64px;
+}
+
+.container svg {
+    fill: #f00;
+    transition: all ease 1.5s;
+}
+
+.container svg:hover {
+   fill: #000000;
+}
+
+.buttons {
+    bottom: 0;
+    position: absolute;
+    background: #000;
+    min-height: 50px;
+    min-width: 460px;
+    border-radius: 10px;
+}
+
+.buttons li {
+    right: 32px;
+    margin-right: 25px;
+    margin-left: 25px;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.buttons li:hover {
+    color: #cdcdcd;
+    transition: 0.4s all ease;
+}
+
+.buttons li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0051ff;
+    transform-origin: bottom right left;
+    transition: transform 0.5s ease-out;
+}
+
+.buttons li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left right;
+}
