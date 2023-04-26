@@ -63,8 +63,8 @@ html, body {
     display: flex;
     position: relative;
     background: #fff;
-    min-height: 545px;
-    min-width: 500px;
+    height: 545px;
+    width: 500px;
     border-radius: 3%;
     box-shadow: 4px 4px 4px 4px #cdcdcd;
     font-family: 'Socular One', sans-serif;
