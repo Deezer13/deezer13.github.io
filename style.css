@@ -60,6 +60,7 @@ html, body {
 }
 
 .content {
+    display: flex;
     position: relative;
     background: #fff;
     min-height: 545px;
