@@ -12,13 +12,13 @@ html, body {
     }
 }
 
-/* .bg-video {
+.bg-video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-} */
+}
 
 .content div {
     display: none;
@@ -28,7 +28,7 @@ html, body {
     display: block;
 }
 
-.container {
+/* .container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ html, body {
     /* /PLAVNOST */
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 
 @keyframes show {
     0% {
