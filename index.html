@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Secular+One&display=swap"
+        rel="stylesheet">
     <script src="resume.js" defer></script>
 </head>
+
 <body>
     <video autoplay muted loop class="bg-video">
         <source src="./images/-1154.mp4">
@@ -21,17 +24,57 @@
         <div class="content">
             <div id="aboutMe">
                 <h3>Daniil Zakabluchnyi</h3>
-                <h3>Skills</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>C++</li>
-                    <li>Git</li>
-                    <li>PHP</li>
-                    <li>SQL</li>
-                </ul>
+                <h5>Skills</h5>
+                <div id="lists">
+                    <div class="listOne">
+                        <ul>
+                            <li data-page2="python" class="underline">Python</li>
+                            <li data-page2="css" class="underline">HTML/CSS</li>
+                            <li data-page2="js" class="underline">JavaScript</li>
+                            <li>C++/C#</li>
+                        </ul>
+                    </div>
+                    <div class="listTwo">
+                        <ul>
+                            <li>Git/GitHub</li>
+                            <li>PHP</li>
+                            <li>SQL/MySQL</li>
+                            <li>GDScript/Godot</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="info">
+                    <div id="python">
+                        <h3>Python</h3>
+                        <h5>Frameworks</h5>
+                        <ul>
+                            <li><small>Django</small></li>
+                        </ul>
+                        <h5>Library</h5>
+                        <ul>
+                            <li><small>Telethon</small></li>
+                        </ul>
+                    </div>
+                    <div id="css">
+                        <h3>CSS</h3>
+                        <h5>Frameworks</h5>
+                        <ul>
+                            <li><small>SASS</small></li>
+                            <li><small>Bootstrap</small></li>
+                        </ul>
+                    </div>
+                    <div id="js">
+                        <h3>JavaScript</h3>
+                        <h5>Frameworks</h5>
+                        <ul>
+                            <li><small>React</small></li>
+                        </ul>
+                        <h5>Library</h5>
+                        <ul>
+                            <li><small>jQuery</small></li>
+                        </ul>
+                    </div>
+                </div>
                 <ul class="buttons">
                     <ul>
                         <li data-page="aboutMe">About me</li>
@@ -57,7 +100,10 @@
                 <p>E-mail: daniilzzzzzdaniil@gmail.com</p>
                 <p>Number: +380660685124</p>
                 <a href="https://www.instagram.com/daniilzakabluchnyi/">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="64px" height="64px"><path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64px" height="64px">
+                        <path
+                            d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z" />
+                    </svg>
                 </a>
                 <ul class="buttons">
                     <ul>
@@ -70,4 +116,5 @@
         </div>
     </div>
 </body>
+
 </html>
