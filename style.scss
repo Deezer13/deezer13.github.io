@@ -211,3 +211,12 @@ initial-value: 0turn;
     transform: scaleX(1);
     transform-origin: bottom left right;
 }
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.icon:hover {
+  animation: spin 3s linear 0s infinite;
+}
