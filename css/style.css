@@ -1,7 +1,8 @@
 * {
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -28,18 +29,35 @@ body {
 }
 
 #lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
 }
 
 #lists div {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .underline {
@@ -58,10 +76,23 @@ body {
 }
 
 .container {
-  animation-name: show;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes show {
@@ -72,6 +103,7 @@ body {
     opacity: 1;
   }
 }
+
 .container a {
   text-decoration: none;
 }
@@ -91,7 +123,8 @@ body {
   height: 570px;
   width: 500px;
   padding: 5px;
-  box-shadow: 4px 4px 4px 4px #cdcdcd;
+  -webkit-box-shadow: 4px 4px 4px 4px #cdcdcd;
+          box-shadow: 4px 4px 4px 4px #cdcdcd;
   font-family: "Socular One", sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -100,11 +133,19 @@ body {
   --border-angle: 0turn;
   border-radius: 3%;
   background-image: conic-gradient(from var(--border-angle), #a0a0a0, #a0a0a0 50%, #a0a0a0), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
-  background-size: calc(100% - var(--border-size) * 2) calc(100% - var(--border-size) * 2), cover;
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
   background-position: center center;
   background-repeat: no-repeat;
-  animation: bg-spin 3s linear infinite;
+  -webkit-animation: bg-spin 3s linear infinite;
+          animation: bg-spin 3s linear infinite;
 }
+
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
@@ -116,6 +157,7 @@ body {
   inherits: true;
   initial-value: 0turn;
 }
+
 .content h3,
 h5 {
   text-align: center;
@@ -144,6 +186,7 @@ a {
 
 .container svg {
   fill: #f00;
+  -webkit-transition: all ease 1.5s;
   transition: all ease 1.5s;
 }
 
@@ -171,46 +214,58 @@ a {
   font-family: sans-serif;
   font-size: 20px;
   cursor: pointer;
+  -webkit-transition: 0.4s all ease;
   transition: 0.4s all ease;
 }
 
 @media (hover: hover) {
   .buttons li:hover {
     color: #cdcdcd;
+    -webkit-transition: 0.4s all ease;
     transition: 0.4s all ease;
   }
 }
+
 .buttons li::after {
   content: "";
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   height: 2px;
   bottom: -5px;
   left: 0;
   background-color: #0051ff;
-  transform-origin: bottom right left;
+  -webkit-transform-origin: bottom right left;
+          transform-origin: bottom right left;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .buttons li:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left right;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left right;
+          transform-origin: bottom left right;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
+
 @media (hover: hover) {
   .icon:hover {
-    animation: spin 3s linear 0s infinite;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
+
 @media (max-width: 768px) {
   .container {
     width: auto;
@@ -218,4 +273,5 @@ a {
     padding-left: 0;
     padding-right: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
